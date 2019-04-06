@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 
 const userRoutes = require('./routes/user');
 const productRoutes = require('./routes/product');
+const itemBrandRoutes = require('./routes/item-brand');
 
 function createExpressApp(database) {
 
@@ -28,6 +29,7 @@ function createExpressApp(database) {
 
     app.use('/user', userRoutes(database));
     app.use('/product', productRoutes(database));
+    app.use('/brand', itemBrandRoutes(database))
 
     return app;
 };

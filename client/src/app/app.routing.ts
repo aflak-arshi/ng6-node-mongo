@@ -8,6 +8,7 @@ import {
 } from './containers';
 
 import { AuthGuard } from './auth/auth.guard';
+import { LandingPageComponent } from './views/landing-page/landing-page.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,13 @@ export const routes: Routes = [
     redirectTo: 'dashboard',
     pathMatch: 'full',
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'index',
+    component: LandingPageComponent,
+    data: {
+      title: 'Landing Page'
+    }
   },
   {
     path: '',

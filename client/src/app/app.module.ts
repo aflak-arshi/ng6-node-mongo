@@ -72,6 +72,8 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { LandingPageComponent } from './views/landing-page/landing-page.component';
+import { LandingPageModule } from './views/landing-page/landing-page.module';
 
 @NgModule({
   imports: [
@@ -80,13 +82,15 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
-    HttpClientModule
+    HttpClientModule,
+    LandingPageModule
   ],
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
     ...APP_DIRECTIVES,
+    LandingPageComponent,
   ],
   providers: [{
     provide: LocationStrategy,
